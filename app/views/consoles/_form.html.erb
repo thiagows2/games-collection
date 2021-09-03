@@ -1,0 +1,38 @@
+<%= form_with(model: console, local: true) do |form| %>
+  <% if console.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(console.errors.count, "error") %> prohibited this console from being saved:</h2>
+
+      <ul>
+      <% console.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="from-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Playstation 4" %>
+  </div>
+
+  <div class="from-group">
+    <%= form.label :acronym %>
+    <%= form.text_field :acronym, class:"form-control", placeholder:"PS4" %>
+  </div>
+
+  <div class="from-group">
+    <%= form.label :url_image %>
+    <%= form.text_field :url_image, class:"form-control", placeholder:"URL da imagem PNG" %>
+  </div>
+  
+  <div class="from-group">
+    <%= form.label :console_type %>
+    <%= form.select("console_type_id", @console_type_query, { include_blank: 'Selecione' }, class:"form-control")%>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

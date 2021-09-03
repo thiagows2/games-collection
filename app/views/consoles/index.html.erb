@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= Console.model_name.human(count: @consoles.count) %></h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= @consoles.human_attribute_name(:description) %></th>
+      <th><%= @consoles.human_attribute_name(:acronym) %></th>
+      <th><%= @consoles.human_attribute_name(:url_image) %> </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consoles.each do |console| %>
+      <tr>
+        <td><%= console.description %></td>
+        <td><%= console.acronym %></td>
+        <td><%= image_tag console.url_image, size: "75x75" %></td>
+        <td><%= link_to t('links.show'), console %></td>
+        <td><%= link_to t('links.edit'), edit_console_path(console) %></td>
+        <td><%= link_to t('links.delete'), console, method: :delete, data: { confirm: t('confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('links.new'), new_console_path, class:"btn btn-primary" %> 
+<%= link_to t('links.back'), welcome_index_path, class:"btn btn-primary" %>
+

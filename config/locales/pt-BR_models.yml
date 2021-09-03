@@ -1,0 +1,27 @@
+pt-BR:
+  activerecord:
+    models:
+      console:
+        one: Video-Game  
+        other: Video-Games
+      console_type: 
+        one: Tipo de Video-Game  
+        other: Tipos de Video-Game
+    attributes:
+      console:
+        id: Código
+        description: Nome
+        acronym: Sigla
+        url_image: URL da Imagem
+        console_type: Tipo de Video-Game
+        console_type_id: ID do Tipo de Video-Game
+        updated_at: Atualizado em
+        created_at:: Criado em
+      console_type:
+        id: Código
+        description: Nome
+        acronym: Sigla
+        updated_at: Atualizado em
+        created_at:: Criado em
+        
+      

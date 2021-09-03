@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @console.description %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @console.acronym %>
+</p>
+
+<p>
+  <strong>Url image:</strong>
+  <%= image_tag @console.url_image, size: "50x50" %>
+</p>
+
+<p>
+  <strong>Console type:</strong>
+  <%= @console.console_type.description %>
+</p>
+
+<%= link_to 'Edit', edit_console_path(@console), class:"btn btn-primary" %> |
+<%= link_to 'Back', consoles_path, class:"btn btn-primary" %>

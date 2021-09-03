@@ -1,0 +1,27 @@
+<%= form_with(model: console_type, local: true) do |form| %>
+  <% if console_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(console_type.errors.count, "error") %> prohibited this console_type from being saved:</h2>
+
+      <ul>
+      <% console_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="from-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, class:"form-control" %>
+  </div>
+
+  <div class="from-group">
+    <%= form.label :acronym %>
+    <%= form.text_field :acronym, class:"form-control"%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

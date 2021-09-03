@@ -1,0 +1,14 @@
+pt-BR:
+  actual_locale: Português do Brazil
+  welcome: Seja Bem-Vindo!
+  messages:
+    welcome: Este é o ConsoleTm, uma app para você cadastrar e acompanhar sua coleção de Consoles.
+    menu: "Para começar, selecione uma das opções abaixo:"
+  hello: Olá Mundo!
+  links:
+    edit: Editar
+    show: Mostrar
+    delete: Apagar
+    new: Novo
+    back: Voltar
+  confirm: Tem certeza?

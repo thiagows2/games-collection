@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @console_type.description %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @console_type.acronym %>
+</p>
+
+<%= link_to 'Edit', edit_console_type_path(@console_type) %> |
+<%= link_to 'Back', console_types_path %>
